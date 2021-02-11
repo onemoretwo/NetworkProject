@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import render_template
-from socket import *
+import socket
 from flask import request
 
 app = Flask(__name__)
@@ -14,11 +14,14 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
 
+    host = socket.gethostname()
+    port = 20300
+
     weight = request.form["weight"]
     height = request.form["height"]
 
-    addr = ("localhost", 7000)
-    cli = socket(AF_INET, SOCK_STREAM)
+    addr = (host, port)
+    cli = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     cli.connect((addr))
 
     print("start client")
@@ -34,7 +37,3 @@ def predict():
         weight = weight,
         height = data
     )
-
-@app.route("/api/data")
-def get_data():
-    return app.send_static_file("data.json")

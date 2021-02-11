@@ -8,16 +8,21 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mycss.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color: #e3e3e3;">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-md">
       <a class="navbar-brand" href="#">Network Project</a>
     </div>
   </nav>
+  
+  <h1 class = "hh">
+    Predict diabetes risk
+  </h1>
+  
 
   <form action="/predict" method="POST">
-    <div class="container" style="padding: 100px 100px 0 100px;">
+    <div class="container" style="padding: 50px 100px 0 100px; " >
       <div class="row g-3">
         <div class="col">
           <input type="text" class="form-control" name="weight" placeholder="น้ำหนัก" aria-label="First name">
@@ -26,7 +31,31 @@
           <input type="text" class="form-control" name="height" placeholder="ส่วนสูง" aria-label="Last name">
         </div>
         <div>
-          <button type="submit" class="btn btn-success">confirm</button>
+          <input type="text" class="form-control mt-3" name="pregnancies" placeholder="Pregnancies" >
+        </div>
+        <div>
+          <input type="text" class="form-control mt-3" name="glucose" placeholder="Glucose" >
+        </div>
+        <div>
+          <input type="text" class="form-control mt-3" name="bloodPressure" placeholder="BloodPressure" >
+        </div>
+        <div>
+          <input type="text" class="form-control mt-3" name="skinThickness" placeholder="SkinThickness" >
+        </div>
+        <div>
+          <input type="text" class="form-control mt-3" name="insulin" placeholder="Insulin" >
+        </div>
+        <div>
+          <input type="text" class="form-control mt-3" name="bmi" placeholder="BMI" >
+        </div>
+        <div>
+          <input type="text" class="form-control mt-3" name="diabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" >
+        </div>
+        <div>
+          <input type="text" class="form-control mt-3" name="age" placeholder="Age" >
+        </div>
+        <div>
+          <button type="submit" class="mybtn mt-2">confirm</button>
         </div>
       </div>
     </div>

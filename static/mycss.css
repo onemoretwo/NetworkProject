@@ -2,3 +2,28 @@
     font-weight: 600;
     color: blue;
 }
+
+.hh{
+    text-align: center;
+    color: black;
+}
+
+.container{
+    background-color: #c9c9c9;
+    width: 800px;
+    height: 1000px;
+    border-radius: 10px;
+
+}
+.mybtn{
+    background-color: #67d466;
+    color: white;
+    font-size: 20px;
+    border-radius: 18px;
+    padding: 15px;
+    border: none;
+    width: 1120px;
+}
+.mybtn:active{
+    transform: translateY(3px);
+}

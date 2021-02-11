@@ -20,6 +20,15 @@ def predict():
     weight = request.form["weight"]
     height = request.form["height"]
 
+    pregnancies = request.form["pregnancies"]
+    glucose = request.form["glucose"]
+    bloodPressure = request.form["bloodPressure"]
+    skinThickness = request.form["skinThickness"]
+    insulin = request.form["insulin"]
+    bmi = request.form["bmi"]
+    diabetesPedigreeFunction = request.form["diabetesPedigreeFunction"]
+    age = request.form["age"]
+
     addr = (host, port)
     cli = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     cli.connect((addr))

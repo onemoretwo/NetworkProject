@@ -12,7 +12,7 @@ srv = socket(AF_INET,SOCK_STREAM)
 
 #bind socket to address
 srv.bind((ADDR))	#double parens create a tuple with one object
-srv.listen(1) # maximum queued connections is 5
+srv.listen(1) # maximum queued connections is 1
 print("Server is ready")
 
 while True:

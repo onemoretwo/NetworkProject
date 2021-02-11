@@ -14,7 +14,7 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
 
-    host = socket.gethostname()
+    host = "127.0.0.1"
     port = 20300
 
     weight = request.form["weight"]

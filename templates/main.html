@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mycss.css')}}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-md">
+      <a class="navbar-brand" href="#">Network Project</a>
+    </div>
+  </nav>
+
+  <form action="/predict" method="POST">
+    <div class="container" style="padding: 100px 100px 0 100px;">
+      <div class="row g-3">
+        <div class="col">
+          <input type="text" class="form-control" name="weight" placeholder="น้ำหนัก" aria-label="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name="height" placeholder="ส่วนสูง" aria-label="Last name">
+        </div>
+        <div>
+          <button type="submit" class="btn btn-success">confirm</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+    <!-- {%if name %}
+        <span class="message">Hello there, {{ name }}!</span>.
+    {% else %}
+        <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
+    {% endif %} -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

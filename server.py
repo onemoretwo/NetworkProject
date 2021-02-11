@@ -1,6 +1,6 @@
 from socket import *
 
-HOST = ''   # or 127.0.0.1 or localhost
+HOST = '127.0.0.1'   # or 127.0.0.1 or localhost
 PORT = 20300
 ADDR = (HOST,PORT)
 BUFFER = 4096
